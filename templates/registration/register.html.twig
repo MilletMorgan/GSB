@@ -1,0 +1,14 @@
+{{ form_start(form) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.prenom) }}
+    {{ form_row(form.nom) }}
+    {{ form_row(form.adresse) }}
+    {{ form_row(form.ville) }}
+    {{ form_row(form.cp) }}
+    {{ form_row(form.date_embauche) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.plainPassword.first) }}
+    {{ form_row(form.plainPassword.second) }}
+
+    <button type="submit">Register</button>
+{{ form_end(form) }}
