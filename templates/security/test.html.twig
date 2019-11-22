@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}access{% endblock %}
+
+{% block body %}
+
+    {% if is_granted(expression('"ROLE_ADMIN" in roles')) %}
+        <h1>You are admin</h1>
+    {% else %}
+        <h1>You are user</h1>
+    {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,10 @@
+Commandes :
+    Lancer le server symfony :          php bin/console server:run
+                                        php bin/console s:r
+
+    Nettoyer le cache :                 php bin/console clear:cache
+                                        php bin/console c:c
+
+    Compiler le css 1 fois :            yarn encore dev
+    Compiler le css automatiquement :   yarn encore dev --watch
+
