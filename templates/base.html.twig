@@ -5,7 +5,6 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}
         {# 'app' must match the first argument to addEntry() in webpack.config.js #}
-        {{ encore_entry_link_tags('app') }}
 
         <link rel="stylesheet" href="{{ asset('build/first_build/app.css') }}">
         <link rel="stylesheet" href="{{ asset('build/first_build/global.css') }}">
@@ -14,7 +13,6 @@
 <body>
 {% block body %}{% endblock %}
 {% block javascripts %}
-    {{ encore_entry_script_tags('app') }}
 
     <!-- Renders app.js & a webpack runtime.js file
         <script src="/build/runtime.js"></script>
