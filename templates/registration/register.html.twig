@@ -4,10 +4,11 @@
 
 {% block body %}
 
-    {% if is_granted(expression('"ROLE_ADMIN" in roles')) %}
+    {# {% if is_granted(expression('"ROLE_ADMIN" in roles')) %} #}
+ 
+    <body>
         <div class="form-card card container">
-            <h1>Créer un utilisateur</h1>
-
+            <h1 class="text-center">Créer un utilisateur</h1>
             {{ form_start(form) }}
             <div class="row">
                 <div class="col-md-6">
@@ -17,7 +18,7 @@
                                 {{ form_errors((form)) }}
                             </div>
                         {% endif %}
-                        <div class="label">
+                        <div class="label colorLabel">
                             {{ form_label(form.username, 'Pseudo') }}
                         </div>
                         <div class="">
@@ -50,6 +51,15 @@
                         </div>
                         <div class="">
                             {{ form_widget(form.roles, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
                         </div>
                     </div>
 
@@ -168,13 +178,23 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block btn-dark">S'enregistrer</button>
             {{ form_end(form) }}
+            <p>
         </div>
-
+{# 
     {% else %}
         <h1>Seul un administrateur peut créer un nouvel utilisateur. Veuillez vous connectez</h1>
         <a href="{{ path('app_login') }}">Connection</a>
-    {% endif %}
+    {% endif %} #}
 
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+    // Mettre Ton Script Ici  
+    $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+    </script>
 {% endblock %}
