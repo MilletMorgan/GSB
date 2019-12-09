@@ -1,0 +1,30 @@
+body {
+    background: url("img/fond.jpg") no-repeat;
+    background-size: cover;
+    font-family: 'Patua One', cursive!important;
+
+}
+
+.form-card {
+    box-shadow : 0 0 20px 4px black;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    max-width: 50%;
+    max-height: 50%;
+    padding: 20px 40px;
+    color: #FFF;
+    text-shadow: 0 0 2px black;
+}
+
+.container{
+    margin-top: 50px;
+}
+
+.btn1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vYXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7QUFFQSIsImZpbGUiOiJhcHAuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG5cbn1cbiJdLCJzb3VyY2VSb290IjoiIn0=*/
