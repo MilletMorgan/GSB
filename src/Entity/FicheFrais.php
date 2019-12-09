@@ -3,6 +3,10 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Form\FormTypeInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\FicheFraisRepository")
@@ -30,6 +34,11 @@ class FicheFrais
      * @ORM\Column(type="datetime")
      */
     private $dateModif;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $user;
 
     public function getId(): ?int
     {
@@ -68,6 +77,18 @@ class FicheFrais
     public function setDateModif(\DateTimeInterface $dateModif): self
     {
         $this->dateModif = $dateModif;
+
+        return $this;
+    }
+
+    public function getUser(): ?int
+    {
+        return $this->user;
+    }
+
+    public function setUser(int $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }
