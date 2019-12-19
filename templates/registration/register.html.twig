@@ -7,7 +7,7 @@
     {# {% if is_granted(expression('"ROLE_ADMIN" in roles')) %} #}
  
     <body>
-        <div class="form-card card container">
+        <div class="form-card my-card container">
             <h1 class="text-center">Créer un utilisateur</h1>
             {{ form_start(form) }}
             <div class="row">
@@ -178,7 +178,7 @@
                 </div>
             </div>
 
-            <button type="button" class="btn btn-primary btn-lg btn-block btn-dark">S'enregistrer</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block btn-dark">S'enregistrer</button>
             {{ form_end(form) }}
             <p>
         </div>

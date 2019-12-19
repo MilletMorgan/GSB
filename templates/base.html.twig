@@ -11,9 +11,16 @@
         <link rel="stylesheet" href="{{ asset('app.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     {% endblock %}
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <a href="{{ path('login') }}">Login</a>
+        <a href="{{ path('register') }}">Register</a>
+        <a href="{{ path('fichefrais') }}">Fiche frais</a>
+    </nav>
 {% block body %}{% endblock %}
 {% block javascripts %}
 

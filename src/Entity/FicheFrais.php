@@ -31,10 +31,11 @@ class FicheFrais
      * @ORM\Column(type="datetime")
      */
     private $dateModif;
+
     /**
      * @ORM\Column(type="integer")
      */
-    private $user;
+    private $userId;
 
     public function getId(): ?int
     {
@@ -74,14 +75,15 @@ class FicheFrais
         return $this;
     }
 
-    public function getUser(): ?int
+    public function getUserId(): ?int
     {
-        return $this->user;
+        return $this->userId;
     }
 
-    public function setUser(int $user): self
+    public function setUserId(int $userId): self
     {
-        $this->user = $user;
+        $this->userId = $userId;
+
         return $this;
     }
 }
